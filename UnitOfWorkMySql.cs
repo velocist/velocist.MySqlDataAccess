@@ -65,6 +65,8 @@ namespace velocist.MySqlDataAccess {
 		public int ExecuteSql(string sql, object[] parameters) => throw new NotImplementedException();
 		public int ExecuteSql(FormattableString sql) => throw new NotImplementedException();
 		public IEnumerable<TEntity> ExecuteSql<TEntity>(string sql) => throw new NotImplementedException();
-		public void Dispose() => throw new NotImplementedException();
+		public void Dispose() {
+			Trace.Write("Dispose UnitOfWorkMySql");
+		}
 	}
 }

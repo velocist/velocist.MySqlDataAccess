@@ -17,7 +17,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\ProjectsManager\velocist.DatabaseManager\velocist.DatabaseManager.csproj" />
     <ProjectReference Include="..\velocist.Services\velocist.Services.csproj" />
   </ItemGroup>
 
