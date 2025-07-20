@@ -17,26 +17,26 @@
 ---
 
 ## 📑 Tabla de Contenidos
-- [Descripción](#descripción)
-- [Características](#características)
-- [Instalación y Uso](#instalación-y-uso)
-  - [1. Referencia la DLL](#1-referencia-la-dll-en-tu-proyecto)
-  - [2. Dependencias](#2-agrega-las-dependencias-necesarias)
-  - [3. Cadena de conexión](#3-configura-la-cadena-de-conexión)
-  - [4. Registro de servicios (DI)](#4-registro-de-servicios-si-usas-dependency-injection)
-  - [5. Uso manual](#5-uso-básico-sin-di-instanciación-manual)
-  - [6. Ejemplo CRUD](#6-ejemplo-de-uso-típico)
-  - [7. Transacciones](#7-manejo-de-transacciones)
+- [Descripción](#descripcion)
+- [Características](#caracteristicas)
+- [Instalación y Uso](#instalacion-y-uso)
+  - [1. Referencia la DLL](#1)
+  - [2. Dependencias](#2)
+  - [3. Cadena de conexión](#3)
+  - [4. Registro de servicios (DI)](#4)
+  - [5. Uso manual](#5)
+  - [6. Ejemplo CRUD](#6)
+  - [7. Transacciones](#7)
 - [Notas adicionales](#notas-adicionales)
 - [Licencia](#licencia)
 - [Autor](#autor)
 
 ---
 
-## 📝 Descripción
+## 📝 Descripción<a name="descripcion"></a>
 Contiene clases para soportar la conexión a base de datos MySQL, patrón Unit of Work y repositorio genérico. Ideal para proyectos .NET que requieran acceso robusto y desacoplado a MySQL.
 
-## ✨ Características
+## ✨ Características<a name="caracteristicas"></a>
 - Acceso a MySQL simplificado
 - Patrón Unit of Work
 - Repositorio genérico tipado
@@ -46,13 +46,13 @@ Contiene clases para soportar la conexión a base de datos MySQL, patrón Unit o
 
 ---
 
-## 🚦 Instalación y Uso
+## 🚦 Instalación y Uso<a name="instalacion-y-uso"></a>
 
-### 1. Referencia la DLL en tu proyecto
+### 1. Referencia la DLL en tu proyecto<a name="1"></a>
 - Agrega el proyecto `velocist.MySqlDataAccess` como referencia en tu solución **o**
 - Añade la DLL compilada (`velocist.MySqlDataAccess.dll` y dependencias) como referencia en tu proyecto destino.
 
-### 2. Agrega las dependencias necesarias
+### 2. Agrega las dependencias necesarias<a name=""></a>
 Asegúrate de tener:
 - `MySql.Data` (driver oficial de MySQL para .NET)
 - `Microsoft.Extensions.Logging` (para logging)
@@ -63,12 +63,12 @@ dotnet add package MySql.Data
 dotnet add package Microsoft.Extensions.Logging
 ```
 
-### 3. Configura la cadena de conexión
+### 3. Configura la cadena de conexión<a name="3"></a>
 ```csharp
 string connectionString = "Server=localhost;Database=mi_db;User Id=usuario;Password=contraseña;";
 ```
 
-### 4. Registro de servicios (si usas Dependency Injection)
+### 4. Registro de servicios (si usas Dependency Injection)<a name="4"></a>
 ```csharp
 using velocist.MySqlDataAccess.Core;
 using Microsoft.Extensions.DependencyInjection;
@@ -81,7 +81,7 @@ Esto registra:
 - `IBaseConnector` → `MySqlConnector`
 - `IBaseRepository<T>` → `Repository<T>`
 
-### 5. Uso básico sin DI (instanciación manual)
+### 5. Uso básico sin DI (instanciación manual)<a name="5"></a>
 ```csharp
 using velocist.MySqlDataAccess.Core;
 using velocist.MySqlDataAccess;
@@ -93,7 +93,7 @@ var repository = new Repository<Usuario>(unitOfWork, "Usuarios");
 var usuarios = repository.List();
 ```
 
-### 6. Ejemplo de uso típico
+### 6. Ejemplo de uso típico<a name="6"></a>
 ```csharp
 public class Usuario
 {
@@ -120,7 +120,7 @@ repository.Update(usuario, whereProperties: new[] { "Id" });
 repository.Delete(usuario, whereProperties: new[] { "Id" });
 ```
 
-### 7. Manejo de transacciones
+### 7. Manejo de transacciones<a name="7"></a>
 ```csharp
 unitOfWork.BeginTransaction();
 try
@@ -137,20 +137,20 @@ catch
 
 ---
 
-## ℹ️ Notas adicionales
+## ℹ️ Notas adicionales<a name="notas-adicionales"></a>
 - El nombre de la tabla se pasa como string al crear el repositorio.
 - Los métodos permiten excluir o filtrar propiedades para operaciones SQL.
 - Si configuras un logger, tendrás trazas de las operaciones.
 
 ---
 
-## 📝 Licencia
+## 📝 Licencia<a name="licencia"></a>
 
 Este proyecto está licenciado bajo la **GNU Lesser General Public License v3.0 (LGPL-3.0)**. Consulta el archivo [LICENSE.txt](./LICENSE.txt) para más detalles.
 
 ---
 
-## 👤 Autor
+## 👤 Autor<a name="autor"></a>
 
 **velocist**
 

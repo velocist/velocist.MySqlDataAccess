@@ -1,6 +1,4 @@
-﻿using velocist.Services.Core.Interfaces.MySql;
-using velocist.Services.Json.Serialization;
-using velocist.Services.Core;
+﻿using velocist.Services.Core;
 
 namespace velocist.MySqlDataAccess.Core {
 

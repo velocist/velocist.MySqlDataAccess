@@ -6,11 +6,20 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <DebugType>embedded</DebugType>
+  </PropertyGroup>
+
   <ItemGroup>
     <Compile Remove="Core\SqlHelper.cs" />
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Autofac" Version="8.3.0" />
     <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.6" />
     <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
     <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.6" />
