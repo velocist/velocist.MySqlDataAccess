@@ -4,6 +4,15 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
+    <Description>Biblioteca para acceso a MySQL con patrón Unit of Work y repositorio genérico en .NET</Description>
+    <Copyright>2025</Copyright>
+    <PackageIcon>ImageCCSoft.png</PackageIcon>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <RepositoryUrl>https://github.com/velocist/velocist.MySqlDataAccess</RepositoryUrl>
+    <PackageReleaseNotes>Primera release de la versión 1.0</PackageReleaseNotes>
+    <Company>velocist</Company>
+    <Title>Biblioteca de acceso a base de datos SQL Server</Title>
+    <Authors>velocist</Authors>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -33,6 +42,17 @@
     <Reference Include="MySql.Data">
       <HintPath>mysql.data.dll</HintPath>
     </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="ImageCCSoft.png">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
   </ItemGroup>
 
 </Project>
