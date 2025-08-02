@@ -1,6 +1,4 @@
 ﻿using velocist.Services.Core;
-using velocist.Services.Json.Serialization;
-using velocist.Services.Sql;
 
 namespace velocist.MySqlDataAccess {
 

@@ -1,30 +1,57 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <TargetFramework>net9.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-  </PropertyGroup>
+	<PropertyGroup>
+		<TargetFramework>net9.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<Configurations>Debug;Release</Configurations>
+		<GenerateDocumentationFile>True</GenerateDocumentationFile>
+		<Title>Biblioteca de acceso a base de datos MySql</Title>
+		<Copyright>2025</Copyright>
+		<PackageIcon>ImageCCSoft.png</PackageIcon>
+		<RepositoryUrl>https://github.com/velocist/velocist.MySqlDataAccess</RepositoryUrl>
+		<Description>Biblioteca para acceso a MySql con patrón Unit of Work y repositorio genérico en .NET</Description>
+		<Company>velocist</Company>
+		<Authors>velocist</Authors>
+	</PropertyGroup>
 
-  <ItemGroup>
-    <Compile Remove="Core\SqlHelper.cs" />
-  </ItemGroup>
+	<ItemGroup>
+		<Content Include="lib\MySql.Data.dll">
+			<Pack>true</Pack>
+			<PackagePath>lib\net9.0\</PackagePath>
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+		<Content Include="README.md">
+		  <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
 
-  <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.7" />
-    <PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
-    <PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.7" />
-  </ItemGroup>
+	<ItemGroup>
+		<Reference Include="MySql.Data">
+			<HintPath>mysql.data.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
-  <ItemGroup>
-    <ProjectReference Include="..\..\ProjectsManager\velocist.DatabaseManager\velocist.DatabaseManager.csproj" />
-    <ProjectReference Include="..\velocist.Services\velocist.Services.csproj" />
-  </ItemGroup>
+	<ItemGroup>
+		<PackageReference Include="Autofac" Version="8.3.0" />
+		<PackageReference Include="Microsoft.AspNetCore.Identity.UI" Version="9.0.7" />
+		<PackageReference Include="Microsoft.Extensions.Logging.Log4Net.AspNetCore" Version="8.0.0" />
+		<PackageReference Include="System.Diagnostics.PerformanceCounter" Version="9.0.7" />
+	</ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="MySql.Data">
-      <HintPath>mysql.data.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+	  <ProjectReference Include="..\velocist.Exceptions\velocist.Exceptions.csproj" />
+	  <ProjectReference Include="..\velocist.LogService\velocist.LogService.csproj" />
+	  <ProjectReference Include="..\velocist.Services\velocist.Services.csproj" />
+	  <ProjectReference Include="..\velocist.Utilities\velocist.Utilities.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="ImageCCSoft.png">
+	    <PackagePath>\</PackagePath>
+	    <Pack>True</Pack>
+	    <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+	  </None>
+	</ItemGroup>
 
 </Project>
