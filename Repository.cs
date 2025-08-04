@@ -1,5 +1,4 @@
 ﻿using velocist.Services.Core;
-using velocist.Services.Sql;
 
 namespace velocist.MySqlDataAccess {
 

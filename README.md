@@ -1,15 +1,10 @@
-# 🚀 velocist.MySqlDataAccess
+
+﻿# 🚀 velocist.MySqlDataAccess
 
 <p align="center">
   <img src="https://img.shields.io/badge/License-LGPL%20v3-blue.svg" alt="License: LGPL v3">
   <img src="https://img.shields.io/badge/Author-velocist-green.svg" alt="Author: velocist">
   <img src="https://img.shields.io/badge/.NET-9.0-blueviolet" alt=".NET 9.0">
-</p>
-<p align="center">
-  <img src="https://img.shields.io/badge/Microsoft.AspNetCore.Identity.UI-9.0.6-blue" alt="Microsoft.AspNetCore.Identity.UI 9.0.6">
-  <img src="https://img.shields.io/badge/Microsoft.Extensions.Logging.Log4Net.AspNetCore-8.0.0-blue" alt="Microsoft.Extensions.Logging.Log4Net.AspNetCore 8.0.0">
-  <img src="https://img.shields.io/badge/System.Diagnostics.PerformanceCounter-9.0.6-blue" alt="System.Diagnostics.PerformanceCounter 9.0.6">
-  <img src="https://img.shields.io/badge/MySql.Data-6.6.4-yellow" alt="MySql.Data custom">
 </p>
 
 > **Biblioteca para acceso a MySQL con patrón Unit of Work y repositorio genérico en .NET**

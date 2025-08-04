@@ -1,5 +1,3 @@
-﻿
-
 namespace velocist.MySqlDataAccess {
 	public class UnitOfWorkMySql : IBaseUnitOfWork {
 
