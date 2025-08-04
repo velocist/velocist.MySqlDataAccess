@@ -1,4 +1,5 @@
 ﻿global using System.Data;
+global using System.Diagnostics;
 global using System.Linq.Expressions;
 global using Microsoft.Extensions.Logging;
 global using MySql.Data.MySqlClient;
@@ -6,6 +7,7 @@ global using velocist.Exceptions;
 global using velocist.MySqlDataAccess.Core;
 global using velocist.MySqlDataAccess.Core.Exceptions;
 global using velocist.MySqlDataAccess.Interfaces;
+global using velocist.Services.Core.Interfaces.MySql;
 global using velocist.Reflection;
 global using velocist.Serialization.Serialization;
 global using velocist.Services.Core.Interfaces;
