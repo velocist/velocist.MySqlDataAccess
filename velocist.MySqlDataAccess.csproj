@@ -54,4 +54,15 @@
 	  </None>
 	</ItemGroup>
 
+  <ItemGroup>
+    <None Update="ImageCCSoft.png">
+      <PackagePath>\</PackagePath>
+      <Pack>True</Pack>
+    </None>
+    <None Update="README.md">
+      <Pack>True</Pack>
+      <PackagePath>\</PackagePath>
+    </None>
+  </ItemGroup>
+
 </Project>

@@ -1,6 +1,5 @@
 ﻿using Autofac;
 using Microsoft.Extensions.DependencyInjection;
-using velocist.Services.Core.Interfaces.MySql;
 
 namespace velocist.MySqlDataAccess.Core {
 	/// <summary>

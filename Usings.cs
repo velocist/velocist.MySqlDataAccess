@@ -4,6 +4,7 @@ global using Microsoft.Extensions.Logging;
 global using MySql.Data.MySqlClient;
 global using velocist.Exceptions;
 global using velocist.MySqlDataAccess.Core;
+global using velocist.MySqlDataAccess.Core.Exceptions;
 global using velocist.MySqlDataAccess.Interfaces;
 global using velocist.Reflection;
 global using velocist.Serialization.Serialization;

@@ -1,6 +1,4 @@
-﻿using velocist.Services.Core.Interfaces.MySql;
-
-namespace velocist.MySqlDataAccess {
+﻿namespace velocist.MySqlDataAccess {
 
 	/// <summary>
 	/// Unit of work class
