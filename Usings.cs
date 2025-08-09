@@ -14,4 +14,5 @@ global using velocist.Services.Core.Interfaces;
 global using velocist.Utilities.Extensions;
 global using velocist.Utilities.Sql;
 global using velocist.Utilities.Types;
+global using velocist.Services.Core;
 global using static velocist.LogService.StaticLoggerFactory;
